@@ -1,0 +1,96 @@
+.social{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+
+  &__twitter{
+    height: 25px;
+    width: 25px;
+    color: $social-main;
+    transition: 0.3s;
+
+    &:hover{
+      color: $social-hover;
+    }
+  }
+
+  &__instagram{
+    height: 25px;
+    width: 25px;
+    color: $social-main;
+    transition: 0.3s;
+
+    &:hover{
+      color: $social-hover;
+    }
+  }
+
+  &__facebook{
+    height: 25px;
+    width: 25px;
+    color: $social-main;
+    transition: 0.3s;
+
+    &:hover{
+      color: $social-hover;
+    }
+  }
+
+  &__flickr{
+    height: 25px;
+    width: 25px;
+    color: $social-main;
+    transition: 0.3s;
+
+    &:hover{
+      color: $social-hover;
+    }
+  }
+
+  &__google-plus{
+    height: 25px;
+    width: 25px;
+    color: $social-main;
+    transition: 0.3s;
+
+    &:hover{
+      color: $social-hover;
+    }
+  }
+
+  &__envelope{
+    height: 25px;
+    width: 25px;
+    color: $social-main;
+    transition: 0.3s;
+
+    &:hover{
+      color: $social-hover;
+    }
+  }
+
+  &__fa-mail-forward{
+    height: 25px;
+    width: 25px;
+    color: $social-main;
+    transition: 0.3s;
+
+    &:hover{
+      color: $social-hover;
+    }
+  }
+
+  &__fa-heart{
+    height: 25px;
+    width: 25px;
+    color: $social-main;
+    transition: 0.3s;
+
+    &:hover{
+      color: $social-hover;
+    }
+  }
+
+}

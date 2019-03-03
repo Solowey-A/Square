@@ -1,0 +1,169 @@
+.container{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 263px;
+  height: 263px;
+  width: 100%;
+  background-color: $second-color;
+  transition: 0.3s;
+  transform: scale(0);
+  transform-origin: 0 100%;
+
+}
+
+#slides{
+  position: relative;
+  height: 263px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.slide{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 70px 25px 25px;
+
+}
+
+.showing{
+  opacity: 1;
+  z-index: 2;
+}
+
+.slide{
+  color: #333;
+}
+
+.controls{
+  margin: 0;
+  border: transparent;
+  outline: none;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  font-size: 14px;
+
+  &:hover{
+    background: rgba(150, 150, 150, 0.65);
+    color: $second-color;
+    opacity: 0.9;
+  }
+}
+
+
+
+.buttons{
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.slide:nth-of-type(1){
+  background: $second-color;
+}
+.slide:nth-of-type(2){
+  background: $slide-color;
+}
+.slide:nth-of-type(3){
+  background: rgba(0, 252, 0, 0.37);
+}
+
+.slide__title{
+  color: $text-color-first;
+  font-family: $font-family-regular;
+  text-transform: uppercase;
+  @include fluid-font(14px, 18px, 320px, 2560px)
+}
+.slide__actor{
+  font-size: $fifth-font-size;
+  font-weight: $font-weight;
+  line-height: 24px;
+  color: $text-color-first;
+}
+.slide__subtitle{
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 14px;
+  color: $text-color-first;
+  max-width: 160px;
+}
+
+.slide__panel{
+  width: 100%;
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+}
+
+.slides__open{
+  color: $text-color-first;
+  background: $second-color;
+  border: transparent;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  cursor: pointer;
+  transition: 0.4s;
+  width: 60px;
+  height: 60px;
+  outline: none;
+  &:before{
+    font-family: FontAwesome;
+    content: "\f065";
+    display: block;
+  }
+  &:hover{
+    color: $third-color;
+  }
+}
+
+
+.slides__closed{
+  + .container{
+    transform: scale(1);
+  }
+  color: $third-color;
+  background: transparent;
+  border: transparent;
+  position: absolute;
+  left: 230px;
+  bottom: 235px;
+  z-index: 10;
+  cursor: pointer;
+  transition: 0.4s;
+  height: 15px;
+  width: 15px;
+
+  &:before{
+    font-family: FontAwesome;
+    content: "\f066";
+    display: block;
+  }
+  &:hover{
+    color: $text-color-first;
+  }
+}

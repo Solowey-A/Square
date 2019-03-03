@@ -1,0 +1,123 @@
+// All elements Form
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='url'],
+input[type='search'],
+input[type='password'],
+textarea,
+select {
+  font-family: inherit;
+  width: 100%;
+  max-width: 100%;
+  background: none;
+  outline: 0 none;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.main__form{
+  border: 2px solid #781241;
+  min-height: 500px;
+  max-width: 488px;
+  width: 100%;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.form-item{
+  height: 53px;
+  position: relative;
+}
+
+.name, .email, .subject{
+  position: absolute;
+  bottom: 0;
+  transition: all 0.5s ease-in-out;
+
+}
+
+.form__field{
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  border: transparent;
+  border-bottom: 1px solid $border-third-color;
+
+}
+
+.message-wrap{
+  height: 153px;
+  position: relative;
+  margin-bottom: 35px;
+}
+.message{
+  position: absolute;
+  top: 21px;
+}
+#message{
+  height: 130px;
+  position: absolute;
+  bottom: 0;
+  border: transparent;
+  border-bottom: 1px solid $border-third-color;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+
+.form__field:focus ~ .name, .form__field:valid ~ .name{
+  bottom: 50%;
+  font-size:$fifth-font-size;
+  color:$fifth-color;
+  &:focus{
+  border-bottom: 1px solid $border-fourth-color;
+  width: 100%;
+  }
+}
+
+.form__field:focus ~ .email, .form__field:valid ~ .email {
+  bottom: 50%;
+  font-size:$fifth-font-size;
+  color:$fifth-color;
+  &:focus{
+  border-bottom: 1px solid $border-fourth-color;
+  width: 100%;
+
+  }
+}
+
+#email:invalid:not(:focus):not(:placeholder-shown) {
+  background: #ff857b;
+  & + .email {
+    font-size:$fifth-font-size;
+    color:$fifth-color;
+    font-family: $font-family;
+    top: 0;
+  }}
+
+.form__field:focus ~ .subject, .form__field:valid ~.subject{
+  bottom: 50%;
+  font-size:$fifth-font-size;
+  color:$fifth-color;
+  &:focus{
+    border-bottom: 1px solid $border-fourth-color;
+    width: 100%;
+
+  }
+}
+
+#message:focus ~ .message, #message:valid ~ .message {
+  top: 0;
+  font-size:$fifth-font-size;
+  color:$fifth-color;
+  border-color: $border-fourth-color;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+

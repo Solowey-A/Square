@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Square</title>
+	<meta name="description" content="">
+	@@include('_include/head.html')
+</head>
+
+<body>
+
+<div class="page-s-container">
+  @@include('_include/header.html')
+
+<div class="main">
+  <div class="main__banner">
+    <img src="images/home_page/freeman.jpg" alt="">
+  </div>
+  <button id="toggle2" class="slides__open" ></button>
+  <div class="container">
+
+    <ul id="slides">
+
+      <li class="slide showing">
+        <h3 class="slide__title reset">morgan freeman</h3>
+        <p class="actor reset">actor</p>
+        <p class="slide__subtitle">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Quisque fringilla mi orci, ac venenatis ante venenatis eget.
+        </p>
+        <div class="slide__panel">
+          <a href="https://www.envelopes.com" target="_blank" class="social__fa-heart"><i class="fa fa-heart"></i></a>
+          <a href="mailto:#" class="social__fa-mail-forward"><i class="fa fa-mail-forward"></i></a>
+          <a href="https://www.envelopes.com" target="_blank" class="social__envelope"><i class="fa fa-envelope"></i></a>
+        </div>
+      </li>
+      <li class="slide">test text2</li>
+      <li class="slide">test text3</li>
+    </ul>
+    <div class="buttons">
+      <button class="controls" id="previous"><i class="fa fa-chevron-left"></i></button>
+
+      <button class="controls" id="next"><i class="fa fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+</div>
+
+  <div class="block-info">
+
+<div class="block-info__workshop">
+
+</div>
+
+    <div class="block-info__news"></div>
+    <div class="block-info__contact"></div>
+  </div>
+
+
+
+  @@include('_include/partners.html')
+  @@include('_include/footer.html')
+</div>
+
+	@@include('_include/inc_script.html')
+@@include('_include/libs_js.html')
+
+</body>
+</html>
